@@ -1,0 +1,78 @@
+{
+  "kind": "build_request",
+  "title": "Update menu styling, reposition About page, and fix map coverage",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Change the Navigation component color scheme to use green tones from the forest palette instead of current colors",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ],
+        "quotes": [
+          "CAN. U CAHNGE THE COLRO ASCHEME TO GREEN FOR THEMNUE PAGE"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation component uses green colors from the forest palette defined in tailwind.config.js",
+        "Both desktop and mobile navigation menu display the green color scheme",
+        "Color changes maintain sufficient contrast for accessibility"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Reorder the route configuration in App.tsx so that the About page (/about) appears immediately after the Home page (/) in the navigation sequence",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ],
+        "quotes": [
+          "MAKE THE ABOTU PAGE RIGHT AFTER THE HOME PAGE IT HSOULD BE POSITIONS RIGHT AFTER THE HOMEPAGE"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Route order in App.tsx places /about immediately after /",
+        "Navigation links in Navigation.tsx reflect the new ordering with About appearing second",
+        "Route functionality remains unchanged"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Extend the PollutionMap component to include all countries worldwide with their respective pollution data and ensure all country SVG paths are properly rendered and interactive",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ],
+        "quotes": [
+          "FOR GOD'S SAKE PLEASE MAKE THE MAP WORK FOR AL COUNTRIES"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Map displays all countries with proper geographic boundaries",
+        "Each country has associated pollution data (MWI score)",
+        "All countries are clickable and show tooltips on hover",
+        "Country colors reflect their pollution levels correctly"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify frontend/src/hooks/useInternetIdentity.ts",
+    "Do not modify frontend/src/hooks/useActor.ts",
+    "Do not modify frontend/src/main.tsx",
+    "Do not modify backend/main.mo data structures",
+    "Maintain existing forest and ocean color palette system"
+  ],
+  "nonGoals": [
+    "Changing the overall site theme or color palette beyond the navigation menu",
+    "Modifying the structure or content of other pages",
+    "Adding new map features beyond country coverage"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Update menu styling, reposition About page, and fix map coverage",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Change Navigation component color scheme to use green tones from the forest palette",
+      "acceptanceCriteria": [
+        "Navigation component uses green colors from the forest palette defined in tailwind.config.js",
+        "Both desktop and mobile navigation menu display the green color scheme",
+        "Color changes maintain sufficient contrast for accessibility"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Replace ocean color classes (bg-ocean-50, text-ocean-900, etc.) with forest color classes (bg-forest-50, text-forest-900, etc.) throughout the Navigation component. Update both the desktop navigation bar and mobile Sheet menu styling to use the forest palette while maintaining accessibility contrast ratios."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Reorder routes so About page appears immediately after Home page",
+      "acceptanceCriteria": [
+        "Route order in App.tsx places /about immediately after /",
+        "Navigation links in Navigation.tsx reflect the new ordering with About appearing second",
+        "Route functionality remains unchanged"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Reorder the Route components in the router configuration so that the AboutPage route (/about) is positioned immediately after the HomePage route (/). Maintain all other routes in their current order."
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Reorder the navigation links array in both desktop and mobile navigation so that the About link appears second (after Home, before Map). Update both the desktop navigation links and the mobile Sheet menu links to reflect this new ordering."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Extend PollutionMap to include all countries worldwide with proper pollution data",
+      "acceptanceCriteria": [
+        "Map displays all countries with proper geographic boundaries",
+        "Each country has associated pollution data (MWI score)",
+        "All countries are clickable and show tooltips on hover",
+        "Country colors reflect their pollution levels correctly"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PollutionMap.tsx",
+          "operation": "modify",
+          "description": "Expand the countryData array to include all countries worldwide with their SVG path definitions and associated MWI pollution scores. Add SVG path elements for all missing countries with proper geographic coordinates and boundaries. Ensure each country path has interactive hover and click handlers with appropriate pollution level classifications (very-high, high, moderate, low, very-low) based on realistic MWI data. Maintain the existing color-coding system and tooltip functionality for all new country additions."
+        }
+      ]
+    }
+  ]
+}

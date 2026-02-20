@@ -1,0 +1,60 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-change-the-navigation-component-color-scheme-to-use-green-tones-from-the-forest-palette-instead-of-current-colors",
+      "featureTitle": "Change the Navigation component color scheme to use green tones from the forest palette instead of current colors",
+      "files": [
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-reorder-the-route-configuration-in-app-tsx-so-that-the-about-page-about-appears-immediately-after-the-home-page-in-the-navigation-sequence",
+      "featureTitle": "Reorder the route configuration in App.tsx so that the About page (/about) appears immediately after the Home page (/) in the navigation sequence",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-extend-the-pollutionmap-component-to-include-all-countries-worldwide-with-their-respective-pollution-data-and-ensure-all-country-svg-paths-are-properly-rendered-and-interactive",
+      "featureTitle": "Extend the PollutionMap component to include all countries worldwide with their respective pollution data and ensure all country SVG paths are properly rendered and interactive",
+      "files": [
+        "frontend/src/components/PollutionMap.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

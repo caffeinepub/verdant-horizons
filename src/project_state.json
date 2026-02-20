@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [
+    "Map not functioning correctly for all countries"
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-change-the-navigation-component-color-scheme-to-use-green-tones-from-the-forest-palette-instead-of-current-colors",
+      "title": "Change the Navigation component color scheme to use green tones from the forest palette instead of current colors",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-reorder-the-route-configuration-in-app-tsx-so-that-the-about-page-about-appears-immediately-after-the-home-page-in-the-navigation-sequence",
+      "title": "Reorder the route configuration in App.tsx so that the About page (/about) appears immediately after the Home page (/) in the navigation sequence",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-extend-the-pollutionmap-component-to-include-all-countries-worldwide-with-their-respective-pollution-data-and-ensure-all-country-svg-paths-are-properly-rendered-and-interactive",
+      "title": "Extend the PollutionMap component to include all countries worldwide with their respective pollution data and ensure all country SVG paths are properly rendered and interactive",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Change menu page color scheme to green",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Reposition About page immediately after Home page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Fix map to work for all countries",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Update menu styling, reposition About page, and fix map coverage",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
